@@ -1,0 +1,37 @@
+{
+  "name": "ensnme",
+  "version": "0.0.0",
+  "description": "Ensure name exists.",
+  "main": "ensnme.deploy.js",
+  "support": "ensnme.support.js",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ensure",
+    "name",
+    "exist",
+    "ensnme"
+  ],
+  "homepage": "https://github.com/volkovasystems/ensnme",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "kein": "^0.18.0"
+  },
+  "dependencies": {
+    "ate": "^0.16.0",
+    "falzy": "^0.19.0",
+    "fname": "^0.0.0",
+    "kein": "^0.18.0",
+    "protype": "^0.21.0",
+    "truly": "^0.18.0",
+    "wichevr": "^0.8.0"
+  }
+}
