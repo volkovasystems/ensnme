@@ -1,6 +1,8 @@
 yarn add \
 babel-runtime \
-ate \
+cagd \
+budge \
+depher \
 falzy \
 fname \
 kein \
@@ -17,7 +19,9 @@ source-map-loader \
 webpack \
 --dev && \
 bower install \
-ate \
+cagd \
+budge \
+depher \
 falzy \
 fname \
 kein \

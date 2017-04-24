@@ -45,13 +45,15 @@
 		Ensure name exists.
 
 		A resolve function can be passed to resolve the name of the entity based on entity.
-		Default resolve function only resolves function names.
+		Resolve function accepts the entity and an overrdding name.
 		Resolve function must return the entity.
 	@end-module-documentation
 
 	@include:
 		{
-			"ate": "ate",
+			"cagd": "cagd",
+			"budge": "budge",
+			"depher": "depher",
 			"falzy": "falzy",
 			"fname": "fname",
 			"kein": "kein",
@@ -62,7 +64,9 @@
 	@end-include
 */
 
-const ate = require( "ate" );
+const cagd = require( "cagd" );
+const budge = require( "budge" );
+const depher = require( "depher" );
 const falzy = require( "falzy" );
 const fname = require( "fname" );
 const kein = require( "kein" );
@@ -70,12 +74,13 @@ const protype = require( "protype" );
 const truly = require( "truly" );
 const wichevr = require( "wichevr" );
 
-const ensnme = function ensnme( entity, resolve ){
+const ensnme = function ensnme( entity, resolve, name ){
 	/*;
 		@meta-configuration:
 			{
 				"entity:required": "*",
-				"resolve": "function"
+				"resolve": "function",
+				"name": "string"
 			}
 		@end-meta-configuration
 	*/
@@ -88,16 +93,23 @@ const ensnme = function ensnme( entity, resolve ){
 		throw new Error( "invalid name resolve procedure" );
 	}
 
-	resolve = wichevr( resolve, function resolve( entity ){
+	let parameter = budge( arguments );
+
+	name = depher( parameter, STRING, "" );
+
+	resolve = depher( parameter, FUNCTION, function resolve( entity, name ){
 		if( protype( entity, FUNCTION ) ){
-			ate( "name", fname( entity ), entity );
+			cagd( "name", wichevr( name, fname( entity ) ), entity );
+
+		}else if( truly( name ) ){
+			cagd( "name", name, entity );
 		}
 
 		return entity;
 	} );
 
 	if( !kein( "name", entity ) || falzy( entity.name ) ){
-		return resolve( entity );
+		return resolve( entity, name );
 	}
 
 	return entity;

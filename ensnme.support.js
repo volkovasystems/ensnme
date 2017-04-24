@@ -45,13 +45,15 @@
               		Ensure name exists.
               
               		A resolve function can be passed to resolve the name of the entity based on entity.
-              		Default resolve function only resolves function names.
+              		Resolve function accepts the entity and an overrdding name.
               		Resolve function must return the entity.
               	@end-module-documentation
               
               	@include:
               		{
-              			"ate": "ate",
+              			"cagd": "cagd",
+              			"budge": "budge",
+              			"depher": "depher",
               			"falzy": "falzy",
               			"fname": "fname",
               			"kein": "kein",
@@ -62,7 +64,9 @@
               	@end-include
               */
 
-var ate = require("ate");
+var cagd = require("cagd");
+var budge = require("budge");
+var depher = require("depher");
 var falzy = require("falzy");
 var fname = require("fname");
 var kein = require("kein");
@@ -70,15 +74,16 @@ var protype = require("protype");
 var truly = require("truly");
 var wichevr = require("wichevr");
 
-var ensnme = function ensnme(entity, resolve) {
+var ensnme = function ensnme(entity, resolve, name) {
 	/*;
-                                               	@meta-configuration:
-                                               		{
-                                               			"entity:required": "*",
-                                               			"resolve": "function"
-                                               		}
-                                               	@end-meta-configuration
-                                               */
+                                                     	@meta-configuration:
+                                                     		{
+                                                     			"entity:required": "*",
+                                                     			"resolve": "function",
+                                                     			"name": "string"
+                                                     		}
+                                                     	@end-meta-configuration
+                                                     */
 
 	if (falzy(entity)) {
 		throw new Error("invalid entity");
@@ -88,16 +93,23 @@ var ensnme = function ensnme(entity, resolve) {
 		throw new Error("invalid name resolve procedure");
 	}
 
-	resolve = wichevr(resolve, function resolve(entity) {
+	var parameter = budge(arguments);
+
+	name = depher(parameter, STRING, "");
+
+	resolve = depher(parameter, FUNCTION, function resolve(entity, name) {
 		if (protype(entity, FUNCTION)) {
-			ate("name", fname(entity), entity);
+			cagd("name", wichevr(name, fname(entity)), entity);
+
+		} else if (truly(name)) {
+			cagd("name", name, entity);
 		}
 
 		return entity;
 	});
 
 	if (!kein("name", entity) || falzy(entity.name)) {
-		return resolve(entity);
+		return resolve(entity, name);
 	}
 
 	return entity;
