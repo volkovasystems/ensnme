@@ -34,6 +34,9 @@
 			"file": "ensnme.js",
 			"module": "ensnme",
 			"author": "Richeve S. Bebedor",
+			"contributors": [
+				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+			],
 			"eMail": "richeve.bebedor@gmail.com",
 			"repository": "https://github.com/volkovasystems/ensnme.git",
 			"test": "ensnme-test.js",
