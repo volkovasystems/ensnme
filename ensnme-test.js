@@ -1,4 +1,6 @@
-
+const assert = require( "assert" );
 const ensnme = require( "./ensnme.js" );
 
-console.log( ensnme( function yeah( ){ } ) );
+assert.ok( ensnme( function yeah( ){ } ) );
+
+console.log( "ok" );
