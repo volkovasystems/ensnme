@@ -55,12 +55,12 @@
 	@include:
 		{
 			"cagd": "cagd",
-			"budge": "budge",
 			"depher": "depher",
 			"falzy": "falzy",
 			"fname": "fname",
 			"kein": "kein",
 			"protype": "protype",
+			"shft": "shft",
 			"truly": "truly",
 			"wichevr": "wichevr"
 		}
@@ -68,12 +68,12 @@
 */
 
 const cagd = require( "cagd" );
-const budge = require( "budge" );
 const depher = require( "depher" );
 const falzy = require( "falzy" );
 const fname = require( "fname" );
 const kein = require( "kein" );
 const protype = require( "protype" );
+const shft = require( "shft" );
 const truly = require( "truly" );
 const wichevr = require( "wichevr" );
 
@@ -96,7 +96,7 @@ const ensnme = function ensnme( entity, resolve, name ){
 		throw new Error( "invalid name resolve procedure" );
 	}
 
-	let parameter = budge( arguments );
+	let parameter = shft( arguments );
 
 	name = depher( parameter, STRING, "" );
 
