@@ -1,12 +1,12 @@
 yarn add \
 babel-runtime \
 cagd \
-budge \
 depher \
 falzy \
 fname \
 kein \
 protype \
+shft \
 truly \
 wichevr \
 --save && \
@@ -20,12 +20,12 @@ webpack \
 --dev && \
 bower install \
 cagd \
-budge \
 depher \
 falzy \
 fname \
 kein \
 protype \
+shft \
 truly \
 wichevr \
 --save \
