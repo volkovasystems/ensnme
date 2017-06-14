@@ -1,8 +1,27 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<script
-			type="application/javascript"
-			src="./ensnme.deploy.js">
-		</script>
+		<title>ensnme unit test</title>
+
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+
+		<script type="application/javascript" src="./ensnme.deploy.js"></script>
 	</head>
+
+	<body>
+		<div id="qunit"></div>
+
+		<div id="qunit-fixture"></div>
+
+		<script type="application/javascript">
+			QUnit.test( "ensnme unit test", function( assert ) {
+
+				let yeah = ensnme( function yeah( ){ } );
+				assert.deepEqual( ensnme( yeah ), yeah, "should be equal" );
+				
+			} );
+		</script>
+	</body>
 </html>
