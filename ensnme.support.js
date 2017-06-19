@@ -36,7 +36,7 @@
               			"author": "Richeve S. Bebedor",
               			"contributors": [
               				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-              				"Vinse Vinalon"
+              				"Vinse Vinalon <vinsevinalon@gmail.com>"
               			],
               			"eMail": "richeve.bebedor@gmail.com",
               			"repository": "https://github.com/volkovasystems/ensnme.git",
