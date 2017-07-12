@@ -5,7 +5,6 @@ depher \
 falzy \
 fname \
 kein \
-protype \
 shft \
 truly \
 wichevr \
@@ -24,7 +23,6 @@ depher \
 falzy \
 fname \
 kein \
-protype \
 shft \
 truly \
 wichevr \

@@ -34,11 +34,11 @@
 			"file": "ensnme.js",
 			"module": "ensnme",
 			"author": "Richeve S. Bebedor",
+			"eMail": "richeve.bebedor@gmail.com",
 			"contributors": [
 				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
 				"Vinse Vinalon <vinsevinalon@gmail.com>"
 			],
-			"eMail": "richeve.bebedor@gmail.com",
 			"repository": "https://github.com/volkovasystems/ensnme.git",
 			"test": "ensnme-test.js",
 			"global": true
@@ -60,7 +60,6 @@
 			"falzy": "falzy",
 			"fname": "fname",
 			"kein": "kein",
-			"protype": "protype",
 			"shft": "shft",
 			"truly": "truly",
 			"wichevr": "wichevr"
@@ -73,7 +72,6 @@ const depher = require( "depher" );
 const falzy = require( "falzy" );
 const fname = require( "fname" );
 const kein = require( "kein" );
-const protype = require( "protype" );
 const shft = require( "shft" );
 const truly = require( "truly" );
 const wichevr = require( "wichevr" );
@@ -93,7 +91,7 @@ const ensnme = function ensnme( entity, resolve, name ){
 		throw new Error( "invalid entity" );
 	}
 
-	if( truly( resolve ) && !protype( resolve, FUNCTION ) ){
+	if( truly( resolve ) && typeof resolve != "function" ){
 		throw new Error( "invalid name resolve procedure" );
 	}
 
@@ -102,7 +100,7 @@ const ensnme = function ensnme( entity, resolve, name ){
 	name = depher( parameter, STRING, "" );
 
 	resolve = depher( parameter, FUNCTION, function resolve( entity, name ){
-		if( protype( entity, FUNCTION ) ){
+		if( typeof entity == "function" ){
 			cagd( "name", wichevr( name, fname( entity ) ), entity );
 
 		}else if( truly( name ) ){
