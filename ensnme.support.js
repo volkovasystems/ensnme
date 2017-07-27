@@ -51,6 +51,8 @@
               		A resolve function can be passed to resolve the name of the entity based on entity.
               		Resolve function accepts the entity and an overrdding name.
               		Resolve function must return the entity.
+              
+              		This will always return the entity.
               	@end-module-documentation
               
               	@include:
@@ -58,11 +60,9 @@
               			"cagd": "cagd",
               			"depher": "depher",
               			"falzy": "falzy",
-              			"fname": "fname",
               			"kein": "kein",
-              			"shft": "shft",
-              			"truly": "truly",
-              			"wichevr": "wichevr"
+              			"nmde": "nmde",
+              			"shft": "shft"
               		}
               	@end-include
               */
@@ -70,11 +70,11 @@
 var cagd = require("cagd");
 var depher = require("depher");
 var falzy = require("falzy");
-var fname = require("fname");
 var kein = require("kein");
+var nmde = require("nmde");
 var shft = require("shft");
-var truly = require("truly");
-var wichevr = require("wichevr");
+
+var DEFAULT_NAME = "procedure";
 
 var ensnme = function ensnme(entity, resolve, name) {
 	/*;
@@ -91,25 +91,23 @@ var ensnme = function ensnme(entity, resolve, name) {
 		throw new Error("invalid entity");
 	}
 
-	if (truly(resolve) && typeof resolve != "function") {
-		throw new Error("invalid name resolve procedure");
-	}
-
 	var parameter = shft(arguments);
 
 	name = depher(parameter, STRING, "");
 
 	resolve = depher(parameter, FUNCTION, function resolve(entity, name) {
-		if (typeof entity == "function") {
-			cagd("name", wichevr(name, fname(entity)), entity);
-
-		} else if (truly(name)) {
-			cagd("name", name, entity);
-		}
+		cagd("name", nmde(entity) || name || DEFAULT_NAME, entity);
 
 		return entity;
 	});
 
+	/*;
+     	@note:
+     		This module just ensure the property name exists on the function.
+     		This will not check if the type of name is incorrect.
+     		Issues will arise based from overriding incorrect type of name.
+     	@end-note
+     */
 	if (!kein("name", entity) || falzy(entity.name)) {
 		return resolve(entity, name);
 	}

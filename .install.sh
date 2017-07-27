@@ -3,11 +3,9 @@ babel-runtime \
 cagd \
 depher \
 falzy \
-fname \
 kein \
+nmde \
 shft \
-truly \
-wichevr \
 --save && \
 yarn add \
 babel-cli \
@@ -21,10 +19,8 @@ bower install \
 cagd \
 depher \
 falzy \
-fname \
 kein \
+nmde \
 shft \
-truly \
-wichevr \
 --save \
 --force-latest
