@@ -1,14 +1,17 @@
 {
 	"name": "ensnme",
-	"version": "0.9.0",
+	"version": "0.10.0",
 	"description": "Ensure name exists.",
 	"main": "ensnme.js",
 	"support": "ensnme.support.js",
 	"deploy": "ensnme.deploy.js",
 	"browser": "ensnme.deploy.js",
 	"scripts": {
+		"pristine": "rsetmod clean && flxc execute ./.install.sh",
+		"clear": "rsetmod clean --clear",
 		"build": "babel ensnme.js --out-file ensnme.support.js --source-maps && webpack --progress --display-modules",
-		"test": "mocha ensnme-test.js"
+		"pretest": "npm run clear && npm run build",
+		"test": "node ensnme-test.js"
 	},
 	"repository": {
 		"type": "git",
@@ -32,10 +35,10 @@
 	"homepage": "https://github.com/volkovasystems/ensnme#readme",
 	"dependencies": {
 		"babel-runtime": "^6.25.0",
-		"cagd": "^0.3.0",
-		"depher": "^0.37.0",
+		"cagd": "^0.4.0",
+		"depher": "^0.38.0",
 		"falzy": "^0.23.0",
-		"kein": "^0.28.0",
+		"kein": "^0.30.0",
 		"nmde": "^0.5.0",
 		"shft": "^0.5.0"
 	},
@@ -45,6 +48,6 @@
 		"babel-plugin-transform-runtime": "^6.23.0",
 		"babel-preset-latest": "^6.24.1",
 		"source-map-loader": "^0.2.1",
-		"webpack": "^3.4.1"
+		"webpack": "^3.5.2"
 	}
 }
