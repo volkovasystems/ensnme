@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>ensnme unit test</title>
+		<meta charset="utf-8">
 
-		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+		<title>test:ensnme</title>
 
-		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
-
-		<script type="application/javascript" src="./ensnme.deploy.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css"/>
 	</head>
 
 	<body>
-		<div id="qunit"></div>
+		<div id="mocha"></div>
 
-		<div id="qunit-fixture"></div>
+		<script type="application/javascript" src="https://unpkg.com/mocha/mocha.js"></script>
 
 		<script type="application/javascript">
-			QUnit.test( "ensnme unit test", function( assert ) {
+			mocha.setup( "bdd" );
+		</script>
 
-				let yeah = ensnme( function yeah( ){ } );
-				assert.deepEqual( ensnme( yeah ), yeah, "should be equal" );
-				
-			} );
+		<script type="application/javascript" src="./test.deploy.js"></script>
+
+		<script type="application/javascript">
+			mocha.run( );
 		</script>
 	</body>
 </html>
