@@ -34,11 +34,11 @@
 			"file": "ensnme.js",
 			"module": "ensnme",
 			"author": "Richeve S. Bebedor",
+			"eMail": "richeve.bebedor@gmail.com",
 			"contributors": [
 				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
 				"Vinse Vinalon <vinsevinalon@gmail.com>"
 			],
-			"eMail": "richeve.bebedor@gmail.com",
 			"repository": "https://github.com/volkovasystems/ensnme.git",
 			"test": "ensnme-test.js",
 			"global": true
@@ -51,6 +51,8 @@
 		A resolve function can be passed to resolve the name of the entity based on entity.
 		Resolve function accepts the entity and an overrdding name.
 		Resolve function must return the entity.
+
+		This will always return the entity.
 	@end-module-documentation
 
 	@include:
@@ -58,12 +60,9 @@
 			"cagd": "cagd",
 			"depher": "depher",
 			"falzy": "falzy",
-			"fname": "fname",
 			"kein": "kein",
-			"protype": "protype",
-			"shft": "shft",
-			"truly": "truly",
-			"wichevr": "wichevr"
+			"nmde": "nmde",
+			"shft": "shft"
 		}
 	@end-include
 */
@@ -71,12 +70,11 @@
 const cagd = require( "cagd" );
 const depher = require( "depher" );
 const falzy = require( "falzy" );
-const fname = require( "fname" );
 const kein = require( "kein" );
-const protype = require( "protype" );
+const nmde = require( "nmde" );
 const shft = require( "shft" );
-const truly = require( "truly" );
-const wichevr = require( "wichevr" );
+
+const DEFAULT_NAME = "procedure";
 
 const ensnme = function ensnme( entity, resolve, name ){
 	/*;
@@ -93,25 +91,23 @@ const ensnme = function ensnme( entity, resolve, name ){
 		throw new Error( "invalid entity" );
 	}
 
-	if( truly( resolve ) && !protype( resolve, FUNCTION ) ){
-		throw new Error( "invalid name resolve procedure" );
-	}
-
 	let parameter = shft( arguments );
 
 	name = depher( parameter, STRING, "" );
 
 	resolve = depher( parameter, FUNCTION, function resolve( entity, name ){
-		if( protype( entity, FUNCTION ) ){
-			cagd( "name", wichevr( name, fname( entity ) ), entity );
-
-		}else if( truly( name ) ){
-			cagd( "name", name, entity );
-		}
+		cagd( "name", nmde( entity ) || name || DEFAULT_NAME, entity );
 
 		return entity;
 	} );
 
+	/*;
+		@note:
+			This module just ensure the property name exists on the function.
+			This will not check if the type of name is incorrect.
+			Issues will arise based from overriding incorrect type of name.
+		@end-note
+	*/
 	if( !kein( "name", entity ) || falzy( entity.name ) ){
 		return resolve( entity, name );
 	}
