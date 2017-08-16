@@ -130,6 +130,22 @@ describe( "ensnme", ( ) => {
 		} );
 	} );
 
+	describe( "`ensnme( function( ){ }, 'yeah' ).name`", ( ) => {
+		it( "should be equal to 'yeah'", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return ensnme( function( ){ }, "yeah" ).name;
+				}
+
+			).value;
+
+			assert.equal( result, "yeah" );
+			
+		} );
+	} );
+
 } );
 
 //: @end-bridge
