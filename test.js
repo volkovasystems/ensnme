@@ -66,6 +66,18 @@ const ensnme = require( "./ensnme.js" );
 
 describe( "ensnme", ( ) => {
 
+	describe( "`ensnme( function yeah( ){ } ).name`", ( ) => {
+		it( "should be equal to 'yeah'", ( ) => {
+			assert.equal( ensnme( function yeah( ){ } ).name, "yeah" );
+		} );
+	} );
+
+	describe( "`ensnme( function( ){ }, 'yeah' ).name`", ( ) => {
+		it( "should be equal to 'yeah'", ( ) => {
+			assert.equal( ensnme( function( ){ }, "yeah" ).name, "yeah" );
+		} );
+	} );
+
 } );
 
 //: @end-server
