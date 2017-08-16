@@ -1,0 +1,116 @@
+{
+	"state": {
+		"passed": 2,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-08-16T05:56:23.426Z",
+	"end": "2017-08-16T05:56:58.464Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "ensnme",
+			"duration": 0,
+			"start": "2017-08-16T05:56:58.094Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "ensnme",
+			"duration": 192,
+			"start": "2017-08-16T05:56:58.095Z",
+			"end": "2017-08-16T05:56:58.287Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-08-16T05:56:58.096Z",
+					"end": "2017-08-16T05:56:58.097Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "ensnme",
+					"associatedTest": "should be equal to 'yeah'"
+				},
+				{
+					"start": "2017-08-16T05:56:58.210Z",
+					"end": "2017-08-16T05:56:58.211Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "ensnme",
+					"associatedTest": "should be equal to 'yeah'"
+				},
+				{
+					"start": "2017-08-16T05:56:58.214Z",
+					"end": "2017-08-16T05:56:58.214Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "ensnme",
+					"associatedTest": "should be equal to 'yeah'"
+				},
+				{
+					"start": "2017-08-16T05:56:58.286Z",
+					"end": "2017-08-16T05:56:58.286Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "ensnme",
+					"associatedTest": "should be equal to 'yeah'"
+				},
+				{
+					"start": "2017-08-16T05:56:58.287Z",
+					"end": "2017-08-16T05:56:58.287Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "ensnme"
+				}
+			]
+		},
+		{
+			"name": "`ensnme( function yeah( ){ } ).name`",
+			"duration": 118,
+			"start": "2017-08-16T05:56:58.095Z",
+			"end": "2017-08-16T05:56:58.213Z",
+			"tests": [
+				{
+					"name": "should be equal to 'yeah'",
+					"start": "2017-08-16T05:56:58.096Z",
+					"end": "2017-08-16T05:56:58.210Z",
+					"duration": 114,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`ensnme( function( ){ }, 'yeah' ).name`",
+			"duration": 74,
+			"start": "2017-08-16T05:56:58.213Z",
+			"end": "2017-08-16T05:56:58.287Z",
+			"tests": [
+				{
+					"name": "should be equal to 'yeah'",
+					"start": "2017-08-16T05:56:58.213Z",
+					"end": "2017-08-16T05:56:58.286Z",
+					"duration": 73,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}
