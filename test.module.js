@@ -102,7 +102,7 @@ describe( "ensnme", ( ) => {
 			assert.equal( ensnme( function( ){ }, "yeah" ).name, "yeah" );
 		} );
 	} );
-	
+
 } );
 
 //: @end-client
@@ -111,6 +111,25 @@ describe( "ensnme", ( ) => {
 //: @bridge:
 
 describe( "ensnme", ( ) => {
+
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
+
+	describe( "`ensnme( function yeah( ){ } ).name`", ( ) => {
+		it( "should be equal to 'yeah'", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return ensnme( function yeah( ){ } ).name;
+				}
+
+			).value;
+
+			assert.equal( result, "yeah" );
+
+		} );
+	} );
+
 } );
 
 //: @end-bridge
