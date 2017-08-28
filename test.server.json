@@ -5,15 +5,15 @@
 		"passes": 2,
 		"pending": 0,
 		"failures": 0,
-		"start": "2017-08-16T05:56:22.232Z",
-		"end": "2017-08-16T05:56:22.240Z",
+		"start": "2017-08-28T08:58:41.614Z",
+		"end": "2017-08-28T08:58:41.622Z",
 		"duration": 8
 	},
 	"tests": [
 		{
 			"title": "should be equal to 'yeah'",
 			"fullTitle": "ensnme `ensnme( function yeah( ){ } ).name` should be equal to 'yeah'",
-			"duration": 2,
+			"duration": 4,
 			"currentRetry": 0,
 			"err": {}
 		},
@@ -31,7 +31,7 @@
 		{
 			"title": "should be equal to 'yeah'",
 			"fullTitle": "ensnme `ensnme( function yeah( ){ } ).name` should be equal to 'yeah'",
-			"duration": 2,
+			"duration": 4,
 			"currentRetry": 0,
 			"err": {}
 		},

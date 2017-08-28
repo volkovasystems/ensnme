@@ -4,8 +4,8 @@
 		"failed": 0,
 		"skipped": 0
 	},
-	"start": "2017-08-16T05:56:23.426Z",
-	"end": "2017-08-16T05:56:58.464Z",
+	"start": "2017-08-28T08:58:42.847Z",
+	"end": "2017-08-28T08:59:21.681Z",
 	"capabilities": {
 		"browserName": "chrome",
 		"chromeOptions": {
@@ -28,52 +28,52 @@
 		{
 			"name": "ensnme",
 			"duration": 0,
-			"start": "2017-08-16T05:56:58.094Z",
+			"start": "2017-08-28T08:59:21.320Z",
 			"tests": [],
 			"hooks": []
 		},
 		{
 			"name": "ensnme",
-			"duration": 192,
-			"start": "2017-08-16T05:56:58.095Z",
-			"end": "2017-08-16T05:56:58.287Z",
+			"duration": 183,
+			"start": "2017-08-28T08:59:21.320Z",
+			"end": "2017-08-28T08:59:21.503Z",
 			"tests": [],
 			"hooks": [
 				{
-					"start": "2017-08-16T05:56:58.096Z",
-					"end": "2017-08-16T05:56:58.097Z",
-					"duration": 1,
-					"title": "\"before each\" hook",
-					"associatedSuite": "ensnme",
-					"associatedTest": "should be equal to 'yeah'"
-				},
-				{
-					"start": "2017-08-16T05:56:58.210Z",
-					"end": "2017-08-16T05:56:58.211Z",
-					"duration": 1,
-					"title": "\"after each\" hook",
-					"associatedSuite": "ensnme",
-					"associatedTest": "should be equal to 'yeah'"
-				},
-				{
-					"start": "2017-08-16T05:56:58.214Z",
-					"end": "2017-08-16T05:56:58.214Z",
+					"start": "2017-08-28T08:59:21.322Z",
+					"end": "2017-08-28T08:59:21.322Z",
 					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "ensnme",
 					"associatedTest": "should be equal to 'yeah'"
 				},
 				{
-					"start": "2017-08-16T05:56:58.286Z",
-					"end": "2017-08-16T05:56:58.286Z",
+					"start": "2017-08-28T08:59:21.453Z",
+					"end": "2017-08-28T08:59:21.453Z",
 					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "ensnme",
 					"associatedTest": "should be equal to 'yeah'"
 				},
 				{
-					"start": "2017-08-16T05:56:58.287Z",
-					"end": "2017-08-16T05:56:58.287Z",
+					"start": "2017-08-28T08:59:21.454Z",
+					"end": "2017-08-28T08:59:21.454Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "ensnme",
+					"associatedTest": "should be equal to 'yeah'"
+				},
+				{
+					"start": "2017-08-28T08:59:21.503Z",
+					"end": "2017-08-28T08:59:21.503Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "ensnme",
+					"associatedTest": "should be equal to 'yeah'"
+				},
+				{
+					"start": "2017-08-28T08:59:21.503Z",
+					"end": "2017-08-28T08:59:21.503Z",
 					"duration": 0,
 					"title": "\"after all\" hook",
 					"associatedSuite": "ensnme"
@@ -82,15 +82,15 @@
 		},
 		{
 			"name": "`ensnme( function yeah( ){ } ).name`",
-			"duration": 118,
-			"start": "2017-08-16T05:56:58.095Z",
-			"end": "2017-08-16T05:56:58.213Z",
+			"duration": 133,
+			"start": "2017-08-28T08:59:21.321Z",
+			"end": "2017-08-28T08:59:21.454Z",
 			"tests": [
 				{
 					"name": "should be equal to 'yeah'",
-					"start": "2017-08-16T05:56:58.096Z",
-					"end": "2017-08-16T05:56:58.210Z",
-					"duration": 114,
+					"start": "2017-08-28T08:59:21.321Z",
+					"end": "2017-08-28T08:59:21.453Z",
+					"duration": 132,
 					"state": "pass"
 				}
 			],
@@ -98,15 +98,15 @@
 		},
 		{
 			"name": "`ensnme( function( ){ }, 'yeah' ).name`",
-			"duration": 74,
-			"start": "2017-08-16T05:56:58.213Z",
-			"end": "2017-08-16T05:56:58.287Z",
+			"duration": 49,
+			"start": "2017-08-28T08:59:21.454Z",
+			"end": "2017-08-28T08:59:21.503Z",
 			"tests": [
 				{
 					"name": "should be equal to 'yeah'",
-					"start": "2017-08-16T05:56:58.213Z",
-					"end": "2017-08-16T05:56:58.286Z",
-					"duration": 73,
+					"start": "2017-08-28T08:59:21.454Z",
+					"end": "2017-08-28T08:59:21.503Z",
+					"duration": 49,
 					"state": "pass"
 				}
 			],
